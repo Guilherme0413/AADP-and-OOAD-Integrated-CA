@@ -5,12 +5,6 @@ Integrated Continuous Assessment 3
  */
 package eirvid;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-
 /**
  *
  * @author Danrlei Martins
