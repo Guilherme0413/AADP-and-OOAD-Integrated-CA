@@ -28,7 +28,6 @@ public class Database {
 
             // Get a connection to the database
             conn = DriverManager.getConnection(dbServer, user, password);
-            conn.close();
         } catch (SQLException se) {
             System.out.println("SQL Exception:");
 

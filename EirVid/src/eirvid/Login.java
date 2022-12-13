@@ -2,12 +2,12 @@ package eirvid;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.Scanner;
+import java.sql.SQLException;
+import eirvid.Utilities.InputUtilities;
 
 /**
  *
- * @author Danrlei Martins
- * Student Number: 2020322
+ * @author Danrlei Martins Student Number: 2020322
  */
 public class Login {
 
@@ -16,19 +16,18 @@ public class Login {
         ResultSet rs;
         String email;
         String password;
-        Scanner input = new Scanner(System.in);
 
         //Set static admin credentials
         String adminEmail = "admin@cct.ie";
-        String adminPassword = "admin";
+        String adminPassword = "Adm1nCCT!";
 
-        System.out.println("Please enter your email address");
-        email = input.next();
+        // Prompt and get user credentials input
+        email = InputUtilities.getUserEmail("Please enter your email");
 
-        System.out.println("Please enter your password");
-        password = input.next();
+        password = InputUtilities.getUserPassword("Please enter your password");
 
-        String query = "SELECT * FROM users WHERE email = ? AND password = ?";
+        // SQL query to authenticate user
+        String query = "SELECT * FROM user WHERE email = ? AND password = ? ";
 
         try {
             ps = Database.getConnection().prepareStatement(query);
@@ -39,20 +38,23 @@ public class Login {
 
             rs = ps.executeQuery();
 
+            //If statement to match username and password with database
             if (rs.next()) {
-                System.out.println("Login Successfull");
+                System.out.println("You have successfully logged in");
             } else {
-                System.out.println("Wrong username or password");
+                System.out.println("Wrong username and/or password");
             }
-            
+
             //If statement to determine access control (if user is admin or not)
-            if (email.equals(adminEmail) & password.equals(adminPassword)){
+            if (email.equals(adminEmail) & password.equals(adminPassword)) {
+                System.out.println("Welcome Admin");
                 //Display Admin Menu
-            } else{
+            } else {
+                System.out.println("Welcome normal user");
                 // Display User Menu
             }
-        } catch (Exception e) {
-
+        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | SQLException e) {
+            e.printStackTrace();
         }
 
     }

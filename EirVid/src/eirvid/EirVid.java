@@ -7,7 +7,7 @@ package eirvid;
 
 /**
  *
- * @author Danrlei Martins
+ * @author Guri's Group
  */
 public class EirVid {
 
@@ -15,6 +15,9 @@ public class EirVid {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-        Database.getConnection();
+        
+        // Run EirVid system
+        LoginMenu.displayMenu();
+        
     }
 }
