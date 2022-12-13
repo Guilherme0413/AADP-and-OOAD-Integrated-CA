@@ -1,34 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package eirvid;
 
-import java.util.Scanner;
+import Utilities.InputUtilities;
 
 /**
  *
- * @author Guilherme Oliveira 2020316
+ * @author Guilherme Oliveira 2020316 
  * This class regards the login menu
  */
 public class LoginMenu {
-    
-    private static void displayMenu() {
+
+    public static void displayMenu() {
         System.out.println("Welcome to EirVid Movie Rental System");
         System.out.println("\n1) Login");
         System.out.println("\n2) Create account");
         System.out.println("\n3) Exit");
-    }
-
-    private static void loginMenuInput() {
-        Scanner input = new Scanner(System.in);
-        int userInput = input.nextInt();
-        while (userInput != 3) {
-            switch (userInput) {
+        int input = InputUtilities.getUserInt("Please choose an option from the list above.", 1, 3);
+        while (input != 3) {
+            switch (input) {
                 case 1:
                     // LoginMenu
-                    //Login.userLogin();
+                    Login.userLogin();
                     break;
                 case 2:
                     // Create account
@@ -37,5 +28,4 @@ public class LoginMenu {
             displayMenu();
         }
     }
-    
 }
