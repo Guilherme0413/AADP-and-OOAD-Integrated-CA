@@ -16,9 +16,9 @@ public class LoginMenu {
         int input = InputUtilities.getUserInt("Please choose an option from the list above.", 1, 3);
         while (input != 3) {
             switch (input) {
-                case 1 -> // LoginMenu
+                case 1 : // LoginMenu
                     Login.userLogin();
-                case 2 -> {
+                case 2 : {
                     // Create account
                 }
             }
