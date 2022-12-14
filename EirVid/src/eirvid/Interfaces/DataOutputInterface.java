@@ -3,11 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
 package eirvid.Interfaces;
+import java.util.List;
+
 
 /**
  *
- * @author Wallace
+ * @author Wallace Esteves
+ * Student number: 2020326
  */
-public interface DataInterface {
-    
+public interface DataOutputInterface {
+   public boolean outputData(List<String[]> data);
 }
