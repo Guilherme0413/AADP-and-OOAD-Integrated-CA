@@ -25,9 +25,10 @@ public class Login implements LoginInterface {
         String adminPassword = "Adm1nCCT!";
 
         // Prompt and get user credentials input
-        email = InputUtilities.getUserEmail("Please enter your email");
+        System.out.println("Welcome to the Login page\n");
+        email = InputUtilities.getUserEmail("Please enter your email\n");
 
-        password = InputUtilities.getUserPassword("Please enter your password");
+        password = InputUtilities.getUserPassword("Please enter your password\n");
 
         // SQL query to authenticate user
         String query = "SELECT * FROM user WHERE email = ? AND password = ? ";
@@ -43,17 +44,17 @@ public class Login implements LoginInterface {
 
             //If statement to match username and password with database
             if (rs.next()) {
-                System.out.println("You have successfully logged in");
+                System.out.println("You have successfully logged in\n");
             } else {
-                System.out.println("Wrong username and/or password");
+                System.out.println("Wrong username and/or password\n");
             }
 
             //If statement to determine access control (if user is admin or not)
             if (email.equals(adminEmail) & password.equals(adminPassword)) {
-                System.out.println("Welcome Admin");
+                System.out.println("Welcome Admin\n");
                 //Display Admin Menu
             } else {
-                System.out.println("Welcome normal user");
+                System.out.println("Welcome normal user\n");
                 // Display User Menu
             }
         } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | SQLException e) {
