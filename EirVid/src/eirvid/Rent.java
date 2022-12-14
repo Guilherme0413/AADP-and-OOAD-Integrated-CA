@@ -4,6 +4,7 @@ package eirvid;
  *
  * @author Willian Lopes do Amaral 2020487
  */
+import eirvid.Interfaces.RentInterface;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.text.NumberFormat;
@@ -15,7 +16,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-public class Rent implements List<Rent> {
+public class Rent implements List<Rent>, RentInterface {
     // Overdue fee per day
 
     public static final BigDecimal OVERDUE_FEE = new BigDecimal("1.00");
@@ -26,7 +27,8 @@ public class Rent implements List<Rent> {
     private LocalDate returnDate;
     private BigDecimal overdueFee;
 
-    public Rent(String clientName, MovieMenu movie, String returnDateString) throws IOException, NullPointerException {
+    @Override
+    public void RentMovie(String clientName, MovieMenu movie, String returnDateString) throws IOException, NullPointerException {
         setClientName(clientName);
         setMovie(movie);
         setCheckoutDate(LocalDate.now());
@@ -47,6 +49,7 @@ public class Rent implements List<Rent> {
      * returnDate) * OVERDUE_FEE
      * Or sets overdueFee to 0, if it is not initialized yet
      */
+    @Override
     public void updateOverdueFee() {
         if (LocalDate.now().isAfter(returnDate)) {
             overdueFee = BigDecimal.valueOf(Period.between((LocalDate) returnDate, LocalDate.now()).getDays());
@@ -55,10 +58,12 @@ public class Rent implements List<Rent> {
             overdueFee = new BigDecimal(0);
     }
 
+    @Override
     public String getClientName() {
         return clientName;
     }
 
+    @Override
     public void setClientName(String clientName) throws IOException {
         if ("".equals(clientName))
             throw new IOException("Name can't be empty or null!");
@@ -102,6 +107,11 @@ public class Rent implements List<Rent> {
         this.returnDate = LocalDate.parse(returnDateString);
     }
 
+    /**
+     *
+     * @return Overdue fee
+     */
+    @Override
     public BigDecimal getOverdueFee() {
         return overdueFee.add(BigDecimal.ZERO);
     }
