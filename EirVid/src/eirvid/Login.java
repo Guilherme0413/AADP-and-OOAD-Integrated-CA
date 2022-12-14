@@ -1,5 +1,6 @@
 package eirvid;
 
+import eirvid.Interfaces.LoginInterface;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -7,11 +8,13 @@ import eirvid.Utilities.InputUtilities;
 
 /**
  *
- * @author Danrlei Martins Student Number: 2020322
+ * @author Danrlei Martins 
+ * Student Number: 2020322
  */
-public class Login {
+public class Login implements LoginInterface {
 
-    public static void userLogin() {
+    @Override
+    public void userLogin() {
         PreparedStatement ps;
         ResultSet rs;
         String email;

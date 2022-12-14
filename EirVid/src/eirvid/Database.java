@@ -5,16 +5,18 @@ Integrated Continuous Assessment 3
  */
 package eirvid;
 
+import eirvid.Interfaces.DatabaseInterface;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
  *
- * @author Danrlei Martins Student Number: 2020322
+ * @author Danrlei Martins 
+ * Student Number: 2020322
  */
 public class Database {
-
+    
     public static Connection getConnection() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 
         Connection conn = null;
@@ -41,7 +43,6 @@ public class Database {
         } catch (Exception e) {
             System.out.println(e);
         }
-
         return conn;
     }
 }
