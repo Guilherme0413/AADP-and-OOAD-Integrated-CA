@@ -11,10 +11,11 @@ import java.sql.SQLException;
 
 /**
  *
- * @author Danrlei Martins Student Number: 2020322
+ * @author Danrlei Martins 
+ * Student Number: 2020322
  */
 public class Database {
-
+    
     public static Connection getConnection() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 
         Connection conn = null;
@@ -41,7 +42,6 @@ public class Database {
         } catch (Exception e) {
             System.out.println(e);
         }
-
         return conn;
     }
 }

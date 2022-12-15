@@ -36,7 +36,6 @@ public class InputUtilities {
             //if input is not text, ask again
 
             System.out.println(prompt); //output prompt
-            System.out.println("Plese enter alphabetical characters ONLY.");
             try {
 
                 userInput = myKB.readLine(); //read input
