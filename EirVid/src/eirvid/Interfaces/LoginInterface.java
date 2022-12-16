@@ -1,5 +1,7 @@
 package eirvid.Interfaces;
 
+import java.util.List;
+
 /**
  *
  * @author Danrlei Martins 
@@ -7,5 +9,5 @@ package eirvid.Interfaces;
  */
 public interface LoginInterface {
     
-    public void userLogin();
+    public List<String> userLogin();
 }

@@ -20,13 +20,16 @@ public class LoginMenu implements LoginMenuInterface {
         System.out.println("\n2) Create account");
         System.out.println("\n3) Exit");
         int input = InputUtilities.getUserInt("Please choose an option from the list above.", 1, 3);
-        while (input != 3) {
             switch (input) {
                 case 1:
                     login.userLogin();
+                    break;
                 case 2:
                     register.userRegister();
+                    break;
+                case 3:
+                    System.out.println("Exiting program...");
+                    return;
             }
-        }
     }
 }

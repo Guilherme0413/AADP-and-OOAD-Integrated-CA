@@ -6,6 +6,7 @@ Integrated Continuous Assessment 3
 package eirvid;
 
 import eirvid.Interfaces.DataOutputInterface;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -20,16 +21,22 @@ public class EirVid {
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
      */
-    public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-        
+    public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+
         // Run EirVid system
         LoginMenu menu = new LoginMenu();
-        
         menu.displayMenu();
         
-        //list of commands to show the output of the csv file 
-     //  List<String[]> data =InputValidation.validateInput("movie_dataset_CA.csv");
-      //  DataOutputInterface outputData = new InputValidation();
-      // outputData.outputData(data);
+        // Testing getting name from database
+        //Renter renter = new Renter();
+        //renter.getRenterName("john@cct.ie");
+        
+        // Testing change password method
+        //renter.changePassword("silvamartins@cct.ie", "Danrle1!95");
+
+        // Showing output of the csv file 
+        //  List<String[]> data =InputValidation.validateInput("movie_dataset_CA.csv");
+        //  DataOutputInterface outputData = new InputValidation();
+        //  outputData.outputData(data);
     }
 }

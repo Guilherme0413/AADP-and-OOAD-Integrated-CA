@@ -16,7 +16,7 @@ import java.io.InputStreamReader;
  * All methods are static
  *
  * @author Ken Healy
- * @modified by Danrlei Martins
+ * @modified by Danrlei Martins - Student Number: 2020322
  */
 public class InputUtilities {
 
@@ -68,9 +68,8 @@ public class InputUtilities {
                 userInput = ""; //set it to nothinig if invalid
             }
 
-        } while (!userInput.matches("^(.+)@(\\S+)$"));
+        } while (!userInput.matches("^(.+)@(\\S+)$")); // Regex to validate email input
 
-        //userInput must be text
         return userInput;
     }
 
@@ -91,9 +90,8 @@ public class InputUtilities {
                 userInput = ""; //set it to nothinig if invalid
             }
 
-        } while (!userInput.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$"));
+        } while (!userInput.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$")); // Regex to validate password input
 
-        //userInput must be text
         return userInput;
     }
 
