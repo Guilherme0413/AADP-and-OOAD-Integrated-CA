@@ -1,101 +1,100 @@
-movie_id,movie_title,genre,year,rating,price
-1,Toy Story,"Animation, Comedy, Family",1995,3,3
-2,Jumanji,"Adventure, Fantasy, Family",1995,8,7
-3,Grumpier Old Men,"Romance, Comedy",1995,6,26
-4,Waiting to Exhale,"Comedy, Drama, Romance",1995,2,4
-5,Father of the Bre Part II,Comedy,1995,10,12
-6,Heat,"Action, Crime, Drama, Thriller",1995,5,11
-7,Sabrina,"Comedy, Romance",1995,5,5
-8,Tom and Huck,"Action, Adventure, Drama, Family",1995,4,19
-9,Sudden Death,"Action, Adventure, Thriller",1995,7,6
-10,GoldenEye,"Adventure, Action, Thriller",1995,9,13
-11,The American Present,"Comedy, Drama, Romance",1995,1,16
-12,Dracula: Dead and Loving It,"Comedy, Horror",1995,4,25
-13,Balto,"Family, Animation, Adventure",1995,8,9
-14,Nixon,"History, Drama",1995,6,17
-15,Cutthroat Island,"Action, Adventure",1995,7,15
-16,Casino,"Drama, Crime",1995,2,21
-17,Sense and Sensibility,"Drama, Romance",1995,10,10
-18,Four Rooms,"Crime, Comedy",1995,5,22
-19,Ace Ventura: When Nature Calls,"Crime, Comedy, Adventure",1995,9,18
-20,Money Train,"Action, Comedy, Crime",1995,1,23
-21,Get Shorty,"Comedy, Thriller, Crime",1995,3,14
-22,Copycat,"Drama, Thriller",1995,5,20
-23,Assassins,"Action, Adventure, Crime, Thriller",1995,7,24
-24,Powder,"Drama, Fantasy, Fiction, Thriller",1995,8,5
-25,Leaving Las Vegas,"Drama, Romance",1995,6,3
-26,Othello,Drama,1995,4,8
-27,Now and Then,"Comedy, Drama, Family",1995,9,13
-28,Persuasion,"Drama, Romance",1995,10,17
-29,The City of Lost Children,"Fantasy, Science Fiction, Adventure",1995,2,22
-30,Shanghai Triad,"Drama, Crime",1995,8,26
-31,Dangerous Minds,"Drama, Crime",1995,1,10
-32,Twelve Monkeys,"Science Fiction, Thriller, Mystery",1995,3,4
-33,Wings of Courage,"Romance, Adventure",1996,6,16
-34,Babe,"Fantasy, Drama, Comedy, Family",1995,5,19
-35,Carrington,"History, Drama, Romance",1995,7,6
-36,Dead Man Walking,Drama,1995,8,21
-37,Across the Sea of Time,"Adventure, History, Drama, Family",1995,4,15
-38,It Takes Two,"Comedy, Family, Romance",1995,10,12
-39,Clueless,"Comedy, Drama, Romance",1995,7,18
-40,"Cry, the Beloved Country",Drama,1995,9,25
-41,Richard III,"Drama, War",1995,2,24
-42,Dead Presents,"Action, Crime, Drama, History",1995,1,11
-43,Restoration,"Drama, Romance",1995,3,1
-44,Mortal Kombat,"Action, Fantasy",1995,7,7
-45,To Die For,"Fantasy, Drama, Comedy, Thriller",1995,6,20
-46,How To Make An American Quilt,"Drama, Romance",1995,9,5
-47,Se7en,"Crime, Mistery, Thriller",1995,9,14
-48,Pocahontas,"Adventure,  Animation, Drama, Family",1995,4,23
-49,When Night Is Falling,"Drama, Romance",1995,10,9
-50,The Usual Suspects,"Drama,  Crime,  Thriller",1995,8,2
-51,Guardian Angel,"Action,  Thriller,  Drama",1994,5,22
-52,Mighty Aphrodite,"Comedy, Romance",1995,2,17
-53,Lamerica,"Drama, Foreign",1994,1,16
-54,The Big Green,"Action,  Adventure,  Comedy,  Family",1995,4,8
-55,Georgia,Drama,1995,9,26
-56,Ks of the Round Table,"Adventure, History",1997,8,24
-57,Home for the Holays,"Comedy,  Drama,  Romance",1995,0,21
-58,The Postman,"Comedy,  Drama,  Romance",1994,5,15
-59,The Confessional,"Thriller,  Drama,  Mystery",1995,7,19
-60,The Indian in the Cupboard,"Adventure,  Family,  Fantasy",1995,10,4
-61,Eye for an Eye,"Drama,  Thriller",1996,6,13
-62,Mr. Hollands Opus,"Music,  Drama,  Family",1995,3,11
-63,Dont Be a Menace to South Central While Drinking Your Juice in the Hood,Comedy,1996,2,18
-64,Two If by Sea,"Comedy,  Romance",1996,1,7
-65,Bio-Dome,Comedy,1996,5,25
-66,Lawnmower Man 2: Beyond Cyberspace,"Action, Science Fiction",1996,8,10
-67,Two Bits,"Drama,  Family",1995,7,1
-68,French Twist,"Comedy,  Romance",1995,10,23
-69,Fray,Comedy,1995,6,6
-70,From Dusk Till Dawn,"Horror,  Action,  Thriller,  Crime",1996,10,20
-71,Fair Game,"Action,  Thriller,  Romance",1995,4,5
-72,Kicking and Screaming,"Comedy,  Drama,  Romance",1995,9,12
-73,Les Miserables,"Drama, History",1995,3,14
-74,Bed of Roses,"Drama,  Romance",1996,2,3
-75,Big Bully,"Comedy,  Family",1996,6,9
-76,Screamers,"Horror, Science Fiction",1995,9,22
-77,Nico Icon,Documentary,1995,5,17
-78,The Crossing Guard,"Drama,  Thriller",1995,10,16
-79,The Juror,"Drama,  Thriller",1996,10,8
-80,The White Balloon,"Family,  Drama",1995,8,26
-81,Things to Do in Denver When Youre Dead,"Drama,  Crime",1995,4,24
-82,Antonias Line,"Drama,  Comedy",1995,7,21
-83,Once Upon a Time... When We Were Colored,"Romance,  Drama",1996,1,15
-84,Last Summer in the Hamptons,"Comedy, Drama",1995,3,19
-85,Angels and Insects,"Drama,  Romance",1995,2,4
-86,White Squall,"Action,  Drama",1996,,13
-87,Dunston Checks In,"Adventure,  Comedy,  Family",1996,l,11
-88,Black Sheep,Comedy,1996,,18
-89,Nick of Time,"Crime,  Drama,  Thriller",1995,,7
-90,The Journey of August King,Drama,1995,,25
-91,Mary Reilly,"Drama, Horror,  Thriller,  Romance",1996,,10
-92,Vampire in Brooklyn,"Comedy, Horror,  Romance",1995,,1
-93,Beautiful Girls,"Comedy,  Drama,  Romance",1996,,23
-94,Broken Arrow,"Action,  Adventure,  Drama,  Thriller",1996,,6
-95,A Mwinters Tale,Comedy,1995,,20
-96,La Haine,Drama,1995,,5
-97,Shopping,"Action,  Adventure,  Drama, Science Fiction,  Thriller",1994,,12
-98,Hei Fleiss: Hollywood Madam,Documentary,1995,,14
-99,City Hall,"Drama,  Thriller",1996,,19
-100,Bottle Rocket,"Comedy,  Crime,  Drama",1996,,3
+1,Toy Story,"Animation, Comedy, Family",1995,3,3,1
+2,Jumanji,"Adventure, Fantasy, Family",1995,8,7,4
+3,Grumpier Old Men,"Romance, Comedy",1995,6,26,9
+4,Waiting to Exhale,"Comedy, Drama, Romance",1995,2,4,5
+5,Father of the Bre Part II,Comedy,1995,10,12,8
+6,Heat,"Action, Crime, Drama, Thriller",1995,5,11,3
+7,Sabrina,"Comedy, Romance",1995,5,5,6
+8,Tom and Huck,"Action, Adventure, Drama, Family",1995,4,19,0
+9,Sudden Death,"Action, Adventure, Thriller",1995,7,6,7
+10,GoldenEye,"Adventure, Action, Thriller",1995,9,13,2
+11,The American Present,"Comedy, Drama, Romance",1995,1,16,10
+12,Dracula: Dead and Loving It,"Comedy, Horror",1995,4,25,5
+13,Balto,"Family, Animation, Adventure",1995,8,9,8
+14,Nixon,"History, Drama",1995,6,17,9
+15,Cutthroat Island,"Action, Adventure",1995,7,15,6
+16,Casino,"Drama, Crime",1995,2,21,0
+17,Sense and Sensibility,"Drama, Romance",1995,10,10,4
+18,Four Rooms,"Crime, Comedy",1995,5,22,1
+19,Ace Ventura: When Nature Calls,"Crime, Comedy, Adventure",1995,9,18,7
+20,Money Train,"Action, Comedy, Crime",1995,1,23,3
+21,Get Shorty,"Comedy, Thriller, Crime",1995,3,14,10
+22,Copycat,"Drama, Thriller",1995,5,20,6
+23,Assassins,"Action, Adventure, Crime, Thriller",1995,7,24,3
+24,Powder,"Drama, Fantasy, Fiction, Thriller",1995,8,5,8
+25,Leaving Las Vegas,"Drama, Romance",1995,6,3,0
+26,Othello,Drama,1995,4,8,4
+27,Now and Then,"Comedy, Drama, Family",1995,9,13,7
+28,Persuasion,"Drama, Romance",1995,10,17,5
+29,The City of Lost Children,"Fantasy, Science Fiction, Adventure",1995,2,22,9
+30,Shanghai Triad,"Drama, Crime",1995,8,26,2
+31,Dangerous Minds,"Drama, Crime",1995,1,10,10
+32,Twelve Monkeys,"Science Fiction, Thriller, Mystery",1995,3,4,4
+33,Wings of Courage,"Romance, Adventure",1996,6,16,8
+34,Babe,"Fantasy, Drama, Comedy, Family",1995,5,19,0
+35,Carrington,"History, Drama, Romance",1995,7,6,7
+36,Dead Man Walking,Drama,1995,8,21,5
+37,Across the Sea of Time,"Adventure, History, Drama, Family",1995,4,15,1
+38,It Takes Two,"Comedy, Family, Romance",1995,10,12,9
+39,Clueless,"Comedy, Drama, Romance",1995,7,18,6
+40,"Cry, the Beloved Country",Drama,1995,9,25,3
+41,Richard III,"Drama, War",1995,2,24,2
+42,Dead Presents,"Action, Crime, Drama, History",1995,1,11,10
+43,Restoration,"Drama, Romance",1995,3,1,7
+44,Mortal Kombat,"Action, Fantasy",1995,7,7,5
+45,To Die For,"Fantasy, Drama, Comedy, Thriller",1995,6,20,1
+46,How To Make An American Quilt,"Drama, Romance",1995,9,5,9
+47,Se7en,"Crime, Mistery, Thriller",1995,9,14,4
+48,Pocahontas,"Adventure,  Animation, Drama, Family",1995,4,23,8
+49,When Night Is Falling,"Drama, Romance",1995,10,9,0
+50,The Usual Suspects,"Drama,  Crime,  Thriller",1995,8,2,3
+51,Guardian Angel,"Action,  Thriller,  Drama",1994,5,22,6
+52,Mighty Aphrodite,"Comedy, Romance",1995,2,17,2
+53,Lamerica,"Drama, Foreign",1994,1,16,10
+54,The Big Green,"Action,  Adventure,  Comedy,  Family",1995,4,8,8
+55,Georgia,Drama,1995,9,26,6
+56,Ks of the Round Table,"Adventure, History",1997,8,24,0
+57,Home for the Holays,"Comedy,  Drama,  Romance",1995,0,21,4
+58,The Postman,"Comedy,  Drama,  Romance",1994,5,15,1
+59,The Confessional,"Thriller,  Drama,  Mystery",1995,7,19,7
+60,The Indian in the Cupboard,"Adventure,  Family,  Fantasy",1995,10,4,5
+61,Eye for an Eye,"Drama,  Thriller",1996,6,13,9
+62,Mr. Hollands Opus,"Music,  Drama,  Family",1995,3,11,3
+63,Dont Be a Menace to South Central While Drinking Your Juice in the Hood,Comedy,1996,2,18,10
+64,Two If by Sea,"Comedy,  Romance",1996,1,7,0
+65,Bio-Dome,Comedy,1996,5,25,8
+66,Lawnmower Man 2: Beyond Cyberspace,"Action, Science Fiction",1996,8,10,6
+67,Two Bits,"Drama,  Family",1995,7,1,4
+68,French Twist,"Comedy,  Romance",1995,10,23,1
+69,Fray,Comedy,1995,6,6,7
+70,From Dusk Till Dawn,"Horror,  Action,  Thriller,  Crime",1996,10,20,5
+71,Fair Game,"Action,  Thriller,  Romance",1995,4,5,9
+72,Kicking and Screaming,"Comedy,  Drama,  Romance",1995,9,12,2
+73,Les Miserables,"Drama, History",1995,3,14,3
+74,Bed of Roses,"Drama,  Romance",1996,2,3,10
+75,Big Bully,"Comedy,  Family",1996,6,9,4
+76,Screamers,"Horror, Science Fiction",1995,9,22,7
+77,Nico Icon,Documentary,1995,5,17,6
+78,The Crossing Guard,"Drama,  Thriller",1995,10,16,8
+79,The Juror,"Drama,  Thriller",1996,10,8,0
+80,The White Balloon,"Family,  Drama",1995,8,26,1
+81,Things to Do in Denver When Youre Dead,"Drama,  Crime",1995,4,24,9
+82,Antonias Line,"Drama,  Comedy",1995,7,21,5
+83,Once Upon a Time... When We Were Colored,"Romance,  Drama",1996,1,15,10
+84,Last Summer in the Hamptons,"Comedy, Drama",1995,3,19,3
+85,Angels and Insects,"Drama,  Romance",1995,2,4,7
+86,White Squall,"Action,  Drama",1996,10,13,0
+87,Dunston Checks In,"Adventure,  Comedy,  Family",1996,5,11,8
+88,Black Sheep,Comedy,1996,6,18,6
+89,Nick of Time,"Crime,  Drama,  Thriller",1995,5,7,4
+90,The Journey of August King,Drama,1995,9,25,1
+91,Mary Reilly,"Drama, Horror,  Thriller,  Romance",1996,8,10,9
+92,Vampire in Brooklyn,"Comedy, Horror,  Romance",1995,4,1,5
+93,Beautiful Girls,"Comedy,  Drama,  Romance",1996,6,23,2
+94,Broken Arrow,"Action,  Adventure,  Drama,  Thriller",1996,8,6,10
+95,A Mwinters Tale,Comedy,1995,5,20,7
+96,La Haine,Drama,1995,10,5,0
+97,Shopping,"Action,  Adventure,  Drama, Science Fiction,  Thriller",1994,10,12,8
+98,Hei Fleiss: Hollywood Madam,Documentary,1995,10,14,6
+99,City Hall,"Drama,  Thriller",1996,10,19,4
+100,Bottle Rocket,"Comedy,  Crime,  Drama",1996,10,3,1
