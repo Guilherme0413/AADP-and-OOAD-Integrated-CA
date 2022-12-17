@@ -1,4 +1,4 @@
-package eirvid.Utilities;
+package eirvid;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
