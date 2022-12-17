@@ -8,7 +8,7 @@ import java.math.BigDecimal;
  */
 public interface MovieMenuInterface {
     
-    public void displayMovieMenu(String movieTitle, String movieGenre, String rentPrice);
+    public void displayMovieMenu();
     
     public String getMovieTitle();
     

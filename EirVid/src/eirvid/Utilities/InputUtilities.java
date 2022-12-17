@@ -45,7 +45,7 @@ public class InputUtilities {
                 userInput = ""; //set it to nothinig if invalid
             }
 
-        } while (!userInput.matches("[a-zA-Z]+"));
+        } while (!userInput.matches("^[a-zA-Z\\s]+$"));
 
         //userInput must be text
         return userInput;

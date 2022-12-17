@@ -65,6 +65,8 @@ public class Login implements LoginInterface {
                 //Display Admin Menu
             } else {
                 System.out.println("Welcome normal user\n");
+                MovieMenu menu = new MovieMenu();
+                menu.displayMovieMenu();
             }
         } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | SQLException e) {
             e.printStackTrace();
