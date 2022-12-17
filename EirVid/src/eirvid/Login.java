@@ -15,8 +15,6 @@ import java.util.Map;
  *
  * @author Danrlei Martins Student Number: 2020322
  *
- * @author Danrlei Martins - Student Number: 2020322
- *
  */
 public class Login implements LoginInterface {
 
@@ -35,11 +33,6 @@ public class Login implements LoginInterface {
         String adminPassword = "Adm1nCCT!";
 
         // Prompt and get user credentials input
-        System.out.println("Welcome to the Login page\n");
-        email = InputUtilities.getUserEmail("Please enter your email\n");
-
-        password = InputUtilities.getUserPassword("Please enter your password\n");
-
         System.out.println("\nWelcome to the Login page");
         email = InputUtilities.getUserEmail("\nPlease enter your email");
 
@@ -60,8 +53,6 @@ public class Login implements LoginInterface {
             //If statement to match username and password with database
             if (rs.next()) {
 
-                System.out.println("You have successfully logged in\n");
-
                 System.out.println("\n" + email + " you have successfully logged in!\n");
 
             } else {
@@ -75,8 +66,6 @@ public class Login implements LoginInterface {
                 //Display Admin Menu
             } else {
                 System.out.println("Welcome normal user\n");
-
-                System.out.println("Welcome Admin...\n");
             }
         } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | SQLException e) {
             e.printStackTrace();
