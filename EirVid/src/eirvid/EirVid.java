@@ -5,8 +5,13 @@ Integrated Continuous Assessment 3
  */
 package eirvid;
 
+
+import eirvid.Interfaces.DataOutputInterface;
+import java.util.List;
+
 import java.io.IOException;
 import java.sql.SQLException;
+
 
 /**
  *
@@ -24,6 +29,15 @@ public class EirVid {
 
         // Run EirVid system
         LoginMenu menu = new LoginMenu();
+ MovieMenu
+        
+        menu.displayMenu();
+        
+        //list of commands to show the output of the csv file 
+     //  List<String[]> data =InputValidation.validateInput("movie_dataset_CA.csv");
+      //  DataOutputInterface outputData = new InputValidation();
+      // outputData.outputData(data);
+
         menu.displayMenu();
         
         // Testing getting name from database
@@ -36,5 +50,6 @@ public class EirVid {
         
         // Testing insert data from csv into database
         //InputValidation.validateInput("movie_dataset_CA.csv");
+
     }
 }

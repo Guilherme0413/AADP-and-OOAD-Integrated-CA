@@ -23,6 +23,12 @@ public class LoginMenu implements LoginMenuInterface {
             switch (input) {
                 case 1:
                     login.userLogin();
+
+                case 2:
+                    register.userRegister();
+            }
+        }
+
                     break;
                 case 2:
                     register.userRegister();
@@ -31,5 +37,6 @@ public class LoginMenu implements LoginMenuInterface {
                     System.out.println("Exiting program...");
                     return;
             }
+
     }
 }

@@ -1,6 +1,8 @@
 package eirvid.Interfaces;
 
+
 import java.util.List;
+
 
 /**
  *
@@ -8,6 +10,9 @@ import java.util.List;
  * Student Number: 2020322
  */
 public interface LoginInterface {
-    
+
+    public void userLogin();
+
     public List<String> userLogin();
+
 }
