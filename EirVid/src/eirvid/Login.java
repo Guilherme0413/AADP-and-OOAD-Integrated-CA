@@ -12,19 +12,15 @@ import java.util.Map;
 
 /**
  *
-
- * @author Danrlei Martins 
- * Student Number: 2020322
-
+ *
+ * @author Danrlei Martins Student Number: 2020322
+ *
  * @author Danrlei Martins - Student Number: 2020322
-
+ *
  */
 public class Login implements LoginInterface {
 
     @Override
-
-    public void userLogin() {
-
     public List<String> userLogin() {
 
         PreparedStatement ps;
@@ -39,7 +35,6 @@ public class Login implements LoginInterface {
         String adminPassword = "Adm1nCCT!";
 
         // Prompt and get user credentials input
-
         System.out.println("Welcome to the Login page\n");
         email = InputUtilities.getUserEmail("Please enter your email\n");
 
@@ -49,7 +44,6 @@ public class Login implements LoginInterface {
         email = InputUtilities.getUserEmail("\nPlease enter your email");
 
         password = InputUtilities.getUserPassword("\nPlease enter your password");
-
 
         // SQL query to authenticate user
         String query = "SELECT * FROM user WHERE email = ? AND password = ? ";
@@ -83,16 +77,11 @@ public class Login implements LoginInterface {
                 System.out.println("Welcome normal user\n");
 
                 System.out.println("Welcome Admin...\n");
-                //Display Admin Menu
-            } else {
-                System.out.println("Welcome normal user...\n");
-
-                // Display User Menu
             }
         } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | SQLException e) {
             e.printStackTrace();
         }
-        
+
         listOfEmails.add(email); // add user email to list
         trackUserLogins(listOfEmails); // add emailList to map of user logins
         setUserLoggedIn(userLogins, email); // set user email as logged in
