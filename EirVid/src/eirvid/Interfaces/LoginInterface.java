@@ -11,8 +11,6 @@ import java.util.List;
  */
 public interface LoginInterface {
 
-    //public void userLogin();
-
     public List<String> userLogin();
 
 }

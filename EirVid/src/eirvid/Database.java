@@ -11,8 +11,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author Danrlei Martins 
- * Student Number: 2020322
+ * @author Danrlei Martins - Student Number: 2020322
  */
 public class Database {
     

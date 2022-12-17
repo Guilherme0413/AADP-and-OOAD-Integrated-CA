@@ -28,19 +28,13 @@ public class EirVid {
         // Run EirVid system
         LoginMenu menu = new LoginMenu();
         menu.displayMenu();
-        
-        //list of commands to show the output of the csv file 
-     //  List<String[]> data =InputValidation.validateInput("movie_dataset_CA.csv");
-      //  DataOutputInterface outputData = new InputValidation();
-      // outputData.outputData(data);
-        
+               
         // Testing getting name from database
         //Renter renter = new Renter();
         //renter.getRenterName("john@cct.ie");
         
         // Testing change password method
         //renter.changePassword("silvamartins@cct.ie", "Danrle1!95");
-
         
         // Testing insert data from csv into database
         //InputValidation.validateInput("movie_dataset_CA.csv");

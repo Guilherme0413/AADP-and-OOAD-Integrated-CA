@@ -12,10 +12,9 @@ import java.util.Map;
 
 /**
  *
- *
- * @author Danrlei Martins Student Number: 2020322
- *
+ * @author Danrlei Martins - Student Number: 2020322
  */
+
 public class Login implements LoginInterface {
 
     @Override
