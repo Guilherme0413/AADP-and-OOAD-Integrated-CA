@@ -41,7 +41,7 @@ class Recommend {
             int thisID = 0;
             for (int i = 0; i < topMovieID.size(); i++) {
                 thisID = topMovieID.get(i);
-                ResultSet mName = movies.executeQuery("select movie_name from movie where rating = " + 8);
+                ResultSet mName = movies.executeQuery("select movie_name from movie where movie_id = " + thisID);
                 if (mName.next()) {
                     topMoviesUser.add(mName.getString("movie_name").trim());
                 }

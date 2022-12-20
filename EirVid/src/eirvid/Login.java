@@ -30,7 +30,7 @@ public class Login implements LoginInterface {
         //Set static admin credentials
         String adminEmail = "admin@cct.ie";
         String adminPassword = "Adm1nCCT!";
-        
+
         // Prompt and get user credentials input
         System.out.println("\nWelcome to the Login page");
         email = InputUtilities.getUserEmail("\nPlease enter your email");
@@ -40,8 +40,6 @@ public class Login implements LoginInterface {
         // SQL query to authenticate user
         String query = "SELECT * FROM user WHERE email = ? AND password = ? ";
 
-        System.out.println(email);
-        System.out.println(password);
         try {
             ps = Database.getConnection().prepareStatement(query);
 
