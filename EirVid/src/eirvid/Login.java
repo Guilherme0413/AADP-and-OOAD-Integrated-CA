@@ -14,31 +14,8 @@ import java.util.Map;
  *
  * @author Danrlei Martins - Student Number: 2020322
  */
+
 public class Login implements LoginInterface {
-
-    @Override
-    public void loginMenu() {
-
-        // Prompt and get user credentials input
-        System.out.println("\nWelcome to the Login page");
-        System.out.println("\n1. Login");
-        System.out.println("\n2. Return to main menu");
-        int input = InputUtilities.getUserInt("\nPlease choose an option", 1, 2);
-
-        do {
-            switch (input) {
-                case 1:
-                    userLogin();
-                    break;
-                case 2:
-                    System.out.println("\nReturning...\n");
-                    LoginMenu menu = new LoginMenu();
-                    menu.displayMenu();
-                    return;
-            }
-        } while (input != 2);
-
-    }
 
     @Override
     public List<String> userLogin() {
@@ -53,13 +30,9 @@ public class Login implements LoginInterface {
         //Set static admin credentials
         String adminEmail = "admin@cct.ie";
         String adminPassword = "Adm1nCCT!";
-<<<<<<< HEAD
         
         // Prompt and get user credentials input
         System.out.println("\nWelcome to the Login page");
-=======
-
->>>>>>> bb9ce0db855e48014a7f8c656758817e09d5fd5f
         email = InputUtilities.getUserEmail("\nPlease enter your email");
 
         password = InputUtilities.getUserPassword("\nPlease enter your password");
