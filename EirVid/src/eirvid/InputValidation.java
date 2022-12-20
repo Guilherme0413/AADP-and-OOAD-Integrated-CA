@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
@@ -24,7 +25,7 @@ public class InputValidation {
                 String[] row = line.split(cvsSplitBy);
                 //       String sql = "INSERT INTO movies VALUES (?,?,?,?,?)";
                 String sql = "INSERT INTO `movies`  VALUES (?,?,?,?,?,?,?)";
-                var statement = conn.prepareStatement(sql);
+                 PreparedStatement statement = conn.prepareStatement(sql);
                 //  statement.setString(1, row[1]);
                 statement.setInt(1, Integer.parseInt(row[0]));
                 statement.setString(2, row[1]);
