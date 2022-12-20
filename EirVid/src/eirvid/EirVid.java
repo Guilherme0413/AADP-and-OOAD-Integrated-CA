@@ -31,7 +31,7 @@ public class EirVid {
                
         // Testing getting name from database
         //Renter renter = new Renter();
-        //renter.getRenterName("john@cct.ie");
+        //renter.getRenterName("silvamartins@cct.ie");
         
         // Testing change password method
         //renter.changePassword("silvamartins@cct.ie", "Danrle1!95");

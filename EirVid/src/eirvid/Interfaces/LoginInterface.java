@@ -1,8 +1,6 @@
 package eirvid.Interfaces;
 
-
 import java.util.List;
-
 
 /**
  *
@@ -11,6 +9,8 @@ import java.util.List;
  */
 public interface LoginInterface {
 
+    public void loginMenu();
+    
     public List<String> userLogin();
 
 }

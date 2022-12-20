@@ -22,6 +22,7 @@ public class MovieMenu implements MovieMenuInterface {
     @Override
     public void displayMovieMenu() {
         System.out.println("Welcome to our Movie List");
+<<<<<<< HEAD
         System.out.println("\n1) Search by Movie Title");
         System.out.println("\n2) Search by Movie Genre");
         System.out.println("\n3) Exit");
@@ -51,10 +52,28 @@ public class MovieMenu implements MovieMenuInterface {
                 } else {
                     System.out.println("Thank you");
                 }
+=======
+        System.out.println("\n1. Search by Movie Title");
+        System.out.println("\n2. Search by Movie Genre");
+        System.out.println("\n3. Exit");
+        int input = InputUtilities.getUserInt("\nPlease choose an option from the list above.", 1, 3);
+>>>>>>> bb9ce0db855e48014a7f8c656758817e09d5fd5f
 
-            case 2:
-            // Call method to search movies by genre
-        }
+        do {
+            switch (input) {
+                case 1:
+                    // Call method to search movies by title
+                    String movieTitle = InputUtilities.getUserText("Please enter the name of the movie");
+                    SearchMovie titleSearch = new SearchMovie(movieTitle);
+                    // Search database
+                    titleSearch.searchMovieTitle(movieTitle);
+                case 2:
+                    // Call method to search movies by genre
+                    String genre = InputUtilities.getUserText("Please enter the genre type");
+                    SearchMovie genreSearch = new SearchMovie("");
+                    genreSearch.searchMovieGenre(genre);
+            }
+        } while (input != 3);
     }
 
     @Override

@@ -24,12 +24,17 @@ public class CreateAccount implements UserRegistrationInterface {
         firstName = InputUtilities.getUserText("Please enter your first name\n");
         lastName = InputUtilities.getUserText("Please enter your last name\n");
         email = InputUtilities.getUserEmail("Please enter a valid email address\n");
+<<<<<<< HEAD
         password = InputUtilities.getUserPassword("Please enter a valid password"
                 + "1. Password must contain at least one digit [0-9]."
                 + "2. Password must contain at least one lowercase Latin character [a-z]."
                 + "3. Password must contain at least one uppercase Latin character [A-Z]."
                 + "4. Password must contain at least one special character like ! @ # & ( )."
                 + "5. Password must contain a length of at least 8 characters and a maximum of 20 characters.");
+=======
+        password = InputUtilities.getUserPassword("Please enter a valid password \n 1. Password must contain at least one digit [0-9]. \n 2. Password must contain at least one lowercase Latin character [a-z]. \n 3. Password must contain at least one uppercase Latin character [A-Z]. \n 4. Password must contain at least one special character like ! @ # & ( ). \n 5. Password must contain a length of at least 8 characters and a maximum of 20 characters.");
+
+>>>>>>> bb9ce0db855e48014a7f8c656758817e09d5fd5f
         // Inserting information into database
         System.out.println("Inserting data into our database...\n");
 
