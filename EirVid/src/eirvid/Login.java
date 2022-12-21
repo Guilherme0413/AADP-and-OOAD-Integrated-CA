@@ -61,7 +61,7 @@ public class Login implements LoginInterface {
                 firstName = rs.getString("first_name");
                 lastName = rs.getString("last_name");
 
-                Customer renter = new Customer(firstName, lastName, email);
+                Customer renter = new Customer(firstName, lastName, email, true);
                 System.out.println("\nWelcome " + firstName + " " + lastName);
 
             } else {

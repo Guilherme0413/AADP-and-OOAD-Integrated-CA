@@ -18,11 +18,13 @@ public class Customer {
     static private String firstName;
     static private String lastName;
     static private String email;
+    static private boolean canRent;
 
-    public Customer(String firstName, String lastName, String email) {
+    public Customer(String firstName, String lastName, String email, boolean canRent) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.canRent = canRent;
     }
 
     public static String getRenterName() {
@@ -32,6 +34,15 @@ public class Customer {
     public static String getRenterEmail() {
         return email;
     }
+
+    public static boolean isCanRent() {
+        return canRent;
+    }
+
+    public static void setCanRent(boolean canRent) {
+        Customer.canRent = canRent;
+    }
+    
 
     //@Override
     public static boolean changePassword(String newPassword) throws ClassNotFoundException, InstantiationException, IllegalAccessException {

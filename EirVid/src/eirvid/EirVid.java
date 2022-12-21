@@ -24,6 +24,8 @@ public class EirVid {
      * @throws java.lang.ClassNotFoundException
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
+     * @throws java.io.IOException
+     * @throws java.sql.SQLException
      */
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException, SQLException {
 

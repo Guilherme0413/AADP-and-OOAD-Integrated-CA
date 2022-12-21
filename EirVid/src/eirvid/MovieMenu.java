@@ -37,12 +37,12 @@ public class MovieMenu implements MovieMenuInterface {
                 // Search and rent a movie
                 movieTitle = InputUtilities.getUserText("Please enter the name of the movie");
                 eirvid.searchMovieTitle(movieTitle);
-                rental.setRentTimer();
+                rental.setRentTimer(); // Please wait 1 min for the rental to finish...
                 System.out.println("Updating your rental history...");
                 rentalHistory.add(movieTitle);
 
                 //For this prototype: when a customer is charged, output the customer, movie, and price to the console
-                System.out.println("Thanks for renting with us, this is a summary of your order: \n");
+                System.out.println("Thanks for renting with us, this is a summary of your order:");
                 System.out.println("Customer: " + Customer.getRenterName());
                 System.out.println("Movie: " + Movie.getMovieTitle());
                 System.out.println("Price: " + Movie.getPrice());
@@ -54,7 +54,6 @@ public class MovieMenu implements MovieMenuInterface {
                 searchGenre = InputUtilities.getUserText("Please enter the name of the genre");
                 SearchMovie eirvid = new SearchMovie();
                 eirvid.searchGenre(searchGenre);
-                
                 returnToMenu();
                 break;
 
@@ -68,7 +67,7 @@ public class MovieMenu implements MovieMenuInterface {
                 returnToMenu();
                 break;
             case 4:
-                System.out.println("\nThese are our top 5 most rented movies:\n");
+                System.out.println("\nThese are our top 5 most rented movies:");
                 ArrayList<String> list = Recommend.getRating();
                 Recommend.topFiveRated(list);
                 returnToMenu();
