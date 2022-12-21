@@ -9,7 +9,7 @@ import java.sql.SQLException;
  *
  * @author Danrlei Martins - Student Number: 2020322
  */
-public class Customer implements RenterInterface {
+public class Customer {
 
     static private String firstName;
     static private String lastName;
@@ -25,12 +25,12 @@ public class Customer implements RenterInterface {
         return firstName + " " + lastName + "\n";
     }
     
-    public String getRenterEmail(){
+    public static String getRenterEmail(){
         return email;
     }
 
-    @Override
-    public boolean changePassword(String newPassword) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+    //@Override
+    public static boolean changePassword(String newPassword) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
         PreparedStatement ps;
 
         // SQL query

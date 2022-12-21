@@ -8,6 +8,8 @@ import eirvid.Interfaces.MovieMenuInterface;
 import eirvid.Utilities.InputUtilities;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class MovieMenu implements MovieMenuInterface {
 
@@ -36,7 +38,6 @@ public class MovieMenu implements MovieMenuInterface {
                 movieTitle = InputUtilities.getUserText("Please enter the name of the movie");
                 eirvid.searchMovieTitle(movieTitle);
                 rental.setRentTimer();
-                //eirvid.updateRentalHistory(movieTitle);
                 System.out.println("Updating your rental history...");
                 rentalHistory.add(movieTitle);
 
@@ -53,6 +54,7 @@ public class MovieMenu implements MovieMenuInterface {
                 searchGenre = InputUtilities.getUserText("Please enter the name of the genre");
                 SearchMovie eirvid = new SearchMovie();
                 eirvid.searchGenre(searchGenre);
+                
                 returnToMenu();
                 break;
 
@@ -72,7 +74,19 @@ public class MovieMenu implements MovieMenuInterface {
                 returnToMenu();
                 break;
             case 5:
-
+                String newPass = InputUtilities.getUserPassword("Please enter your new password");
+                 {
+                    try {
+                        Customer.changePassword(newPass);
+                    } catch (ClassNotFoundException ex) {
+                        Logger.getLogger(MovieMenu.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (InstantiationException ex) {
+                        Logger.getLogger(MovieMenu.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IllegalAccessException ex) {
+                        Logger.getLogger(MovieMenu.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+                break;
             case 6:
                 System.out.println("Exiting...");
         }
