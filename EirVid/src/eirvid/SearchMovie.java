@@ -7,7 +7,8 @@ import java.util.ArrayList;
 
 /**
  *
- * @author
+ * @author Wallace Esteves - 2020326
+ * @author Caio Machado - 2020351
  */
 public class SearchMovie {
 

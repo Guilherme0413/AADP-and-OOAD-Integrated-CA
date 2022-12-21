@@ -13,7 +13,11 @@ import java.sql.SQLException;
 
 /**
  *
- * @author Guri's Group
+ * @author Caio Machado - 2020351
+ * @author Danrlei Martins - 
+ * @author Guilherme - 
+ * @author Wallace Esteves -
+ * @author Willian Amaral - 
  */
 public class EirVid {
 
