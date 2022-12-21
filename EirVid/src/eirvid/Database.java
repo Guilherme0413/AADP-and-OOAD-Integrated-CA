@@ -14,7 +14,7 @@ import java.sql.SQLException;
  * @author Danrlei Martins - Student Number: 2020322
  */
 public class Database {
-    
+
     public static Connection getConnection() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 
         Connection conn = null;
@@ -38,8 +38,8 @@ public class Database {
                 System.out.println("Error  : " + se.getErrorCode());
                 se = se.getNextException();
             }
-        } catch (Exception e) {
-            System.out.println(e);
+        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException e) {
+            e.printStackTrace();
         }
         return conn;
     }

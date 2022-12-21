@@ -1,8 +1,6 @@
 package eirvid;
 
-import eirvid.Interfaces.RenterInterface;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -24,8 +22,8 @@ public class Customer {
     public static String getRenterName() {
         return firstName + " " + lastName + "\n";
     }
-    
-    public static String getRenterEmail(){
+
+    public static String getRenterEmail() {
         return email;
     }
 

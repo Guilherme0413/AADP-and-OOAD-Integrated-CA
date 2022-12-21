@@ -2,7 +2,7 @@ package eirvid;
 
 /**
  *
- * @author Guilherme Oliveira Student Numbers: 2020322 & 2020316
+ * @author Danrlei Martins & Guilherme Oliveira Student Numbers: 2020322 & 2020316
  */
 import eirvid.Interfaces.UserRegistrationInterface;
 import eirvid.Utilities.InputUtilities;

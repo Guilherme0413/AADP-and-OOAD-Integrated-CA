@@ -29,19 +29,14 @@ public class EirVid {
      */
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException, SQLException {
 
+                
+        // Insert data from csv into database
+        //InputValidation.validateInput("movie_dataset_CA.csv");
+
         // Run EirVid system
         LoginMenu menu = new LoginMenu();
         menu.displayMenu();
 
-        // Testing getting name from database
-        //Renter renter = new Renter();
-        //renter.getRenterName("john@cct.ie");
-        
-        // Testing change password method
-        //renter.changePassword("silvamartins@cct.ie", "Danrle1!95");
-        
-        // Testing insert data from csv into database
-        //InputValidation.validateInput("movie_dataset_CA.csv");
 
     }
 }

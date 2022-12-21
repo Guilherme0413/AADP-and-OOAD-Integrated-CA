@@ -58,6 +58,7 @@ public class Login implements LoginInterface {
 
             } else {
                 System.out.println("\nWrong username and/or password\n");
+                System.out.println("\nReturning to login menu...");
                 menu.displayMenu();
             }
 
@@ -65,7 +66,7 @@ public class Login implements LoginInterface {
             if (email.equals(adminEmail) & password.equals(adminPassword)) {
 
                 System.out.println("Welcome Admin\n");
-                //Display Admin Menu
+                //Display Admin Menu - To be implemented
             } else {
                 MovieMenu menu = new MovieMenu();
                 menu.displayMovieMenu();
