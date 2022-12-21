@@ -36,7 +36,5 @@ public class EirVid {
         // Run EirVid system
         LoginMenu menu = new LoginMenu();
         menu.displayMenu();
-
-
     }
 }

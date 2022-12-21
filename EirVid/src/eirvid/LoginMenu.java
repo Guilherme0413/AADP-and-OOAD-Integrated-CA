@@ -16,9 +16,9 @@ public class LoginMenu implements LoginMenuInterface {
         CreateAccount register = new CreateAccount();
 
         System.out.println("Welcome to EirVid Movie Rental System");
-        System.out.println("\n1) Login");
-        System.out.println("\n2) Create account");
-        System.out.println("\n3) Exit");
+        System.out.println("\n1. Login");
+        System.out.println("\n2. Create account");
+        System.out.println("\n3. Exit");
         int input = InputUtilities.getUserInt("Please choose an option from the list above.", 1, 3);
         switch (input) {
             case 1:

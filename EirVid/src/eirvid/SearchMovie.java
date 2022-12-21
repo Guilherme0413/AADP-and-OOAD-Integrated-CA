@@ -49,9 +49,9 @@ public class SearchMovie {
 
                 new Movie(title, genre, year, price);
 
-                System.out.println("Movie Title: " + title + "\n");
-                System.out.println("Genre: " + genre + "\n");
-                System.out.println("Year: " + year + "\n");
+                System.out.println("\nMovie Title: " + title);
+                System.out.println("Genre: " + genre);
+                System.out.println("Year: " + year);
                 System.out.println("Price: " + price + "\n");
 
             } while (rs.next());

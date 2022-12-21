@@ -23,10 +23,8 @@ public class InputValidation {
             while ((line = br.readLine()) != null) {
                 //use comma as separator 
                 String[] row = line.split(cvsSplitBy);
-                //       String sql = "INSERT INTO movies VALUES (?,?,?,?,?)";
                 String sql = "INSERT INTO `movies`  VALUES (?,?,?,?,?,?,?)";
-                 PreparedStatement statement = conn.prepareStatement(sql);
-                //  statement.setString(1, row[1]);
+                PreparedStatement statement = conn.prepareStatement(sql);
                 statement.setInt(1, Integer.parseInt(row[0]));
                 statement.setString(2, row[1]);
                 statement.setString(3, row[2]);
