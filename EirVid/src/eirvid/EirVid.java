@@ -5,8 +5,6 @@ Integrated Continuous Assessment 3
  */
 package eirvid;
 
-
-import java.util.List;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -14,10 +12,10 @@ import java.sql.SQLException;
 /**
  *
  * @author Caio Machado - 2020351
- * @author Danrlei Martins - 
- * @author Guilherme - 
- * @author Wallace Esteves -
- * @author Willian Amaral - 
+ * @author Danrlei Martins - 2020322
+ * @author Guilherme Oliveira - 2020316
+ * @author Wallace Esteves - 2020326
+ * @author Willian Amaral - 2020487
  */
 public class EirVid {
 

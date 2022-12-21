@@ -8,6 +8,14 @@ import eirvid.Utilities.InputUtilities;
 
 /**
  *
+ * The Login class implements the LoginInterface and its methods. The
+ * userLogin() method prompts the user to input his/her email and password and
+ * stores it in the variables email and password. The query is then used to
+ * check the database to see if the credentials match a user in the database. If
+ * there is a match, the user is directed to the MovieMenu, if not, the user is
+ * directed back to the LoginMenu. If the user is the admin, the admin menu will
+ * be displayed.
+ *
  * @author Danrlei Martins - Student Number: 2020322
  */
 public class Login implements LoginInterface {

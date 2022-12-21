@@ -2,7 +2,15 @@ package eirvid;
 
 /**
  *
- * @author Danrlei Martins & Guilherme Oliveira Student Numbers: 2020322 & 2020316
+ * This class implements the UserRegistrationInterface and provides the
+ * implementation of the userRegister() method. The class contains the necessary
+ * variables and methods to register a user. It takes in the user's first name,
+ * last name, email and password, creates a query string and inserts the user
+ * data into the database. If the data is successfully inserted, the user is
+ * taken to the login menu.
+ *
+ * @author Danrlei Martins & Guilherme Oliveira Student Numbers: 2020322 &
+ * 2020316
  */
 import eirvid.Interfaces.UserRegistrationInterface;
 import eirvid.Utilities.InputUtilities;
@@ -18,7 +26,6 @@ public class CreateAccount implements UserRegistrationInterface {
     private String query;
     PreparedStatement ps;
     LoginMenu menu = new LoginMenu();
-    
 
     @Override
     public void userRegister() {

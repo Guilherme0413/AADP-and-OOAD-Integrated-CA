@@ -1,6 +1,12 @@
 package eirvid;
 
 /**
+ * This is a class called Movie that contains the variables movieTitle, genre,
+ * year, and price. These variables are all static, meaning they can be used in
+ * any object of the Movie class. The constructor takes in four parameters,
+ * movieTitle, genre, year, and price, and assigns them to their respective
+ * fields. It also contains four getter methods which can be used to retrieve
+ * the values of the fields.
  *
  * @author Danrlei Martins - 2020322
  */

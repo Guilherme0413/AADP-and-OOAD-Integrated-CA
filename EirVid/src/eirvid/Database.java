@@ -1,8 +1,3 @@
-/*
-Algorithms, Architecture and Design Patterns
-Object Oriented Analysis and Design
-Integrated Continuous Assessment 3
- */
 package eirvid;
 
 import java.sql.Connection;
@@ -10,6 +5,13 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
+ * This class is used to create a Database connection and establish a connection
+ * to MySQL. It contains a method called getConnection() which takes
+ * ClassNotFoundException, InstantiationException, and IllegalAccessException as
+ * parameters. The method first loads the database driver and then creates a
+ * connection to the database using the DriverManager.getConnection() method. It
+ * then catches any SQLException and prints out the errors. Finally, it returns
+ * the Connection object.
  *
  * @author Danrlei Martins - Student Number: 2020322
  */

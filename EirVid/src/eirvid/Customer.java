@@ -4,6 +4,12 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
+ * This is a Customer class that contains three static variables, firstName,
+ * lastName and email. It also contains a constructor that takes in three
+ * parameters, firstName, lastName and email. The values of these parameters are
+ * stored in the static variables. The class also contains two static methods,
+ * getRenterName and getRenterEmail, which return the values of the firstName,
+ * lastName and email variables.
  *
  * @author Danrlei Martins - Student Number: 2020322
  */
