@@ -5,10 +5,12 @@ package eirvid;
  * @author Willian Lopes do Amaral 2020487
  */
 import eirvid.Interfaces.RentInterface;
+import eirvid.Utilities.InputUtilities;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.text.NumberFormat;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.Period;
 import java.time.format.DateTimeParseException;
 import java.util.Collection;
@@ -23,9 +25,38 @@ public class Rent implements List<Rent>, RentInterface {
 
     private String clientName;
     private MovieMenu movie;
+    private String MovieTitle;
     private LocalDate checkoutDate;
     private LocalDate returnDate;
     private BigDecimal overdueFee;
+    private int rentalMovieQtnd = 0;
+    private int input;
+    private final Integer MAXIMUM_RENTAL_PERMITED = 5;
+    SearchMovie eirvid = new SearchMovie();
+    public String movieTitle;
+
+    private boolean hasRentalPermition(LocalTime rentalTime) {
+        return LocalTime.now().isAfter(rentalTime.plusMinutes(0));
+    }
+
+    public void setRentTimer() {
+
+        LocalTime rentalTime = LocalTime.now();
+        rentalMovieQtnd = rentalMovieQtnd + 1;
+
+        input = InputUtilities.getUserInt("Would you like to rent this movie?\n 0. No\n 1. Yes", 0, 1);
+
+        if (input == 1) {
+
+            while (!hasRentalPermition(rentalTime)) {
+                System.out.println("Please wait...");
+            }
+            if (rentalMovieQtnd >= MAXIMUM_RENTAL_PERMITED) {
+                System.out.println("The rental Limited has been reached");
+            }
+        }
+
+    }
 
     @Override
     public void RentMovie(String clientName, MovieMenu movie, String returnDateString) throws IOException, NullPointerException {
@@ -45,17 +76,18 @@ public class Rent implements List<Rent>, RentInterface {
     }
 
     /**
-     * Updates overdueFee if currentDate > returnDate per formula: (currentDate -
-     * returnDate) * OVERDUE_FEE
-     * Or sets overdueFee to 0, if it is not initialized yet
+     * Updates overdueFee if currentDate > returnDate per formula: (currentDate
+     * - returnDate) * OVERDUE_FEE Or sets overdueFee to 0, if it is not
+     * initialized yet
      */
     @Override
     public void updateOverdueFee() {
         if (LocalDate.now().isAfter(returnDate)) {
             overdueFee = BigDecimal.valueOf(Period.between((LocalDate) returnDate, LocalDate.now()).getDays());
             overdueFee = overdueFee.multiply(OVERDUE_FEE);
-        } else if (overdueFee == null)
+        } else if (overdueFee == null) {
             overdueFee = new BigDecimal(0);
+        }
     }
 
     @Override
@@ -65,15 +97,17 @@ public class Rent implements List<Rent>, RentInterface {
 
     @Override
     public void setClientName(String clientName) throws IOException {
-        if ("".equals(clientName))
+        if ("".equals(clientName)) {
             throw new IOException("Name can't be empty or null!");
+        }
         this.clientName = clientName;
     }
 
-    // public Movie getMovie() { return movie; }
+    // public SearchMovie getMovie() { return movie; }
     private void setMovie(MovieMenu movie) throws NullPointerException {
-        if (movie == null)
+        if (movie == null) {
             throw new NullPointerException("Movie can't be null!");
+        }
         this.movie = movie;
     }
 
@@ -89,19 +123,19 @@ public class Rent implements List<Rent>, RentInterface {
 
     /**
      * Converts returnDateString to returnDate LocalDate object
-     * 
+     *
      * @param checkoutDate2 - returnDate represented as String
-     * @throws IOException            if returnDateString is empty or null
+     * @throws IOException if returnDateString is empty or null
      * @throws DateTimeParseException if returnDateString is not using formula
-     *                                yyyy-MM-dd
+     * yyyy-MM-dd
      */
-
     private void setReturnDate(String returnDateString) throws IOException, DateTimeParseException {
         // Checks for string's emptiness. If fails -> throws IOException
         // if(returnDateString == null || returnDateString.isEmpty()) throw new
         // IOException("The return date is empty or null");
-        if ("".equals(returnDateString))
+        if ("".equals(returnDateString)) {
             throw new IOException("The return date is empty or null");
+        }
 
         // Tries to parse the string. If fails -> throws DateTimeParseException
         this.returnDate = LocalDate.parse(returnDateString);
@@ -121,7 +155,7 @@ public class Rent implements List<Rent>, RentInterface {
         /*
          * Output example:
          * Name: Jack
-         * Movie title: Harry Potter
+         * SearchMovie title: Harry Potter
          * Rent price: $20.99
          * Checkout date: 2017-07-28
          * Return date: 2017-08-05
@@ -132,8 +166,8 @@ public class Rent implements List<Rent>, RentInterface {
         // noinspection StringBufferReplaceableByString
         StringBuilder strBld = new StringBuilder();
         strBld.append("Name: ").append(clientName).append("\n");
-        strBld.append("Movie title: ").append(movie.getMovieTitle()).append("\n");
-        strBld.append("Rent price: ").append(currencyFormat.format(movie.getRentPrice())).append("\n");
+        //strBld.append("Movie title: ").append(movie.getMovieTitle()).append("\n");
+        //strBld.append("Rent price: ").append(currencyFormat.format(movie.getRentPrice())).append("\n");
         strBld.append("Checkout date: ").append(checkoutDate).append("\n");
         strBld.append("Return date: ").append(returnDate).append("\n");
         strBld.append("Overdue fee: ").append(currencyFormat.format(overdueFee));

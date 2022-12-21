@@ -7,68 +7,80 @@ package eirvid;
 import eirvid.Interfaces.MovieMenuInterface;
 import eirvid.Utilities.InputUtilities;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.util.ArrayList;
+
 public class MovieMenu implements MovieMenuInterface {
-    
-    private final Integer MAXIMUM_RENTAL_PERMITED = 5;
+
     private String movieTitle;
     private String movieGenre;
+    private String searchGenre;
     private BigDecimal rentPrice;
-    private int rentalMovieQtnd = 0;
+    private int input;
+    SearchMovie eirvid = new SearchMovie();
+    Rent rental = new Rent();
+    ArrayList<String> rentalHistory = new ArrayList<>();
 
     @Override
     public void displayMovieMenu() {
-        System.out.println("Welcome to our Movie List");
-        System.out.println("\n1) Search by Movie Title");
-        System.out.println("\n2) Search by Movie Genre");
-        System.out.println("\n3) Exit");
-        int input = InputUtilities.getUserInt("Please choose an option from the list above.", 1, 3);
+        System.out.println("\nEirVid Menu");
+        System.out.println("\n1. Search by Movie Title");
+        System.out.println("\n2. Search by Movie Genre");
+        System.out.println("\n3. See your rental history");
+        System.out.println("\n4. Get movie recommendations");
+        System.out.println("\n5. Exit");
+        input = InputUtilities.getUserInt("Please choose an option from the list above.", 1, 5);
         switch (input) {
             case 1:
-                // Call method to search movies by title
-                String movieTitle = InputUtilities.getUserText("Please enter the name of the movie");
-                Movie movies = new Movie(movieTitle);
-                // Search database
-                movies.getMovieTitle(movieTitle);
-                LocalTime rentalTime = LocalTime.now();
-                rentalMovieQtnd = rentalMovieQtnd + 1;
-                System.out.println("Do you would like to rent another movie?");
-                input = InputUtilities.getUserInt("Please choose an option from the list above.", 1, 2);
-                if (input == 1) {
-                    while (!hasRentalPermition(rentalTime)) {
-                        System.out.println("PLease wait");
-                    }
-                    if (rentalMovieQtnd >= MAXIMUM_RENTAL_PERMITED) {
-                        System.out.println("The rental Limited has been reached");
-                    }
-                    displayMovieMenu();
-                } else {
-                    System.out.println("Thank you");
-                }
+                // Search and rent a movie
+                movieTitle = InputUtilities.getUserText("Please enter the name of the movie");
+                eirvid.searchMovieTitle(movieTitle);
+                rental.setRentTimer();
+                //eirvid.updateRentalHistory(movieTitle);
+                System.out.println("Updating your rental history...");
+                rentalHistory.add(movieTitle);
 
+                //For this prototype: when a customer is charged, output the customer, movie, and price to the console
+                System.out.println("Thanks for renting with us, this is a summary of your order: \n");
+                System.out.println("Customer: " + Customer.getRenterName());
+                System.out.println("Movie: " + Movie.getMovieTitle());
+                System.out.println("Price: " + Movie.getPrice());
+
+                returnToMenu();
+                break;
             case 2:
-            // Call method to search movies by genre
+                // Call method to search movies by genre
+                searchGenre = InputUtilities.getUserText("Please enter the name of the genre");
+                break;
+
+            case 3:
+                System.out.println("\nThese are the movies you have rented before:\n");
+                //eirvid.getRentalHistory();
+                for (int i = 0; i < rentalHistory.size(); i++) {
+                    System.out.println(rentalHistory.get(i));
+                    System.out.println("\n");
+                }
+                returnToMenu();
+                break;
+            case 4:
+                System.out.println("\nThese are our top 5 most rented movies:\n");
+                ArrayList<String> list = Recommend.getRating();
+                Recommend.topFiveRated(list);
+                returnToMenu();
+                break;
+            case 5:
+                System.out.println("Exiting...");
         }
     }
 
-    @Override
-    public String getMovieTitle() {
-        return movieTitle;
-    }
+    private void returnToMenu() {
+        int returnToMenu = InputUtilities.getUserInt("Would you like to return to the main menu?\n 0. No\n 1. Yes", 0, 1);
 
-    @Override
-    public String getMovieGenre() {
-        return movieGenre;
-    }
-
-    @Override
-    public BigDecimal getRentPrice() {
-        return rentPrice.add(BigDecimal.ZERO);
-    }
-
-    private boolean hasRentalPermition(LocalTime rentalTime) {
-        return LocalTime.now().isAfter(rentalTime.plusMinutes(1));
+        if (returnToMenu == 1) {
+            displayMovieMenu();
+        } else {
+            System.out.println("Thank you, exiting program...");
+            System.exit(0);
+        }
     }
 
 }

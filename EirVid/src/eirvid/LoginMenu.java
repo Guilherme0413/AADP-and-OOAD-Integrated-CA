@@ -23,9 +23,13 @@ public class LoginMenu implements LoginMenuInterface {
         switch (input) {
             case 1:
                 login.userLogin();
-
+                break;
             case 2:
                 register.userRegister();
+                break;
+            case 3:
+                System.out.println("Exiting...");
+                return;
         }
     }
 

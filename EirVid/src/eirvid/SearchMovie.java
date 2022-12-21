@@ -2,6 +2,7 @@ package eirvid;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -14,7 +15,7 @@ public class SearchMovie {
     private String[] genreSearch;
     private boolean rented;
     private String query;
-    public ArrayList<String> rentalHistory = new ArrayList<String>();
+    public ArrayList<String> rentalHistory; 
     PreparedStatement ps;
     ResultSet rs;
 
@@ -49,7 +50,7 @@ public class SearchMovie {
 
             } while (rs.next());
 
-        } catch (Exception e) {
+        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | SQLException e) {
 
         }
     }
@@ -59,6 +60,8 @@ public class SearchMovie {
     }
 
     public ArrayList<String> updateRentalHistory(String movieTitle) {
+        
+        rentalHistory = new ArrayList<>();
 
         rentalHistory.add(movieTitle);
 

@@ -14,31 +14,35 @@ import java.util.Map;
  *
  * @author Danrlei Martins - Student Number: 2020322
  */
-
 public class Login implements LoginInterface {
 
-    @Override
-    public List<String> userLogin() {
+    PreparedStatement ps;
+    ResultSet rs;
+    private String email;
+    private String password;
+    private String adminEmail;
+    private String adminPassword;
+    private String query;
+    private String firstName;
+    private String lastName;
+    List<String> listOfEmails = new ArrayList<>();
+    Map<String, Boolean> userLogins = new HashMap<>();
+    LoginMenu menu = new LoginMenu();
 
-        PreparedStatement ps;
-        ResultSet rs;
-        String email;
-        String password;
-        List<String> listOfEmails = new ArrayList<>();
-        Map<String, Boolean> userLogins = new HashMap<>();
+    @Override
+    public void userLogin() {
 
         //Set static admin credentials
-        String adminEmail = "admin@cct.ie";
-        String adminPassword = "Adm1nCCT!";
+        adminEmail = "admin@cct.ie";
+        adminPassword = "Adm1nCCT!";
 
         // Prompt and get user credentials input
-        System.out.println("\nWelcome to the Login page");
         email = InputUtilities.getUserEmail("\nPlease enter your email");
 
         password = InputUtilities.getUserPassword("\nPlease enter your password");
 
         // SQL query to authenticate user
-        String query = "SELECT * FROM user WHERE email = ? AND password = ? ";
+        query = "SELECT first_name, last_name, email, password FROM user WHERE email = ? AND password = ? ";
 
         try {
             ps = Database.getConnection().prepareStatement(query);
@@ -52,10 +56,15 @@ public class Login implements LoginInterface {
             //If statement to match username and password with database
             if (rs.next()) {
 
-                System.out.println("\n" + email + " you have successfully logged in!\n");
+                firstName = rs.getString("first_name");
+                lastName = rs.getString("last_name");
+
+                Customer renter = new Customer(firstName, lastName, email);
+                System.out.println("\nWelcome " + firstName + " " + lastName);
 
             } else {
-                System.out.println("Wrong username and/or password\n");
+                System.out.println("\nWrong username and/or password\n");
+                menu.displayMenu();
             }
 
             //If statement to determine access control (if user is admin or not)
@@ -64,7 +73,6 @@ public class Login implements LoginInterface {
                 System.out.println("Welcome Admin\n");
                 //Display Admin Menu
             } else {
-                System.out.println("Welcome normal user\n");
                 MovieMenu menu = new MovieMenu();
                 menu.displayMovieMenu();
             }
@@ -72,31 +80,6 @@ public class Login implements LoginInterface {
             e.printStackTrace();
         }
 
-        listOfEmails.add(email); // add user email to list
-        trackUserLogins(listOfEmails); // add emailList to map of user logins
-        setUserLoggedIn(userLogins, email); // set user email as logged in
-
-        return listOfEmails;
-    }
-
-    // Method to keep track of which user has logged in
-    public static Map<String, Boolean> trackUserLogins(List<String> emails) {
-        Map<String, Boolean> userLogins = new HashMap<>();
-
-        for (String email : emails) {
-            userLogins.put(email, false);
-        }
-        return userLogins;
-    }
-
-    // Set user as logged in
-    public static void setUserLoggedIn(Map<String, Boolean> userLogins, String email) {
-        userLogins.put(email, true);
-    }
-
-    // Check if user is logged in
-    public static boolean isUserLoggedIn(Map<String, Boolean> userLogins, String email) {
-        return userLogins.get(email);
     }
 
 }
