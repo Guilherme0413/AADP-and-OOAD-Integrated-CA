@@ -32,7 +32,7 @@ public class EirVid {
         // Run EirVid system
         LoginMenu menu = new LoginMenu();
         menu.displayMenu();
-               
+
         // Testing getting name from database
         //Renter renter = new Renter();
         //renter.getRenterName("john@cct.ie");

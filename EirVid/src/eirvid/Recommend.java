@@ -13,13 +13,9 @@ import java.util.ArrayList;
  *
  * @author Caio Machado - Student Number: 2020351
  */
-
 class Recommend {
 
-    // recommended movie names
-    static ArrayList<String> rec;
-    static ArrayList<String> topMoviesUser;
-    static ArrayList<Integer> topMovieID;
+    // Recommended movie names
     static ArrayList<String> topMovies;
     static PreparedStatement ps;
     static ResultSet rs;
@@ -59,5 +55,5 @@ class Recommend {
 
         return topFiveMovies;
     }
-    
+
 }

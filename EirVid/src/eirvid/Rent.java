@@ -36,7 +36,7 @@ public class Rent implements List<Rent>, RentInterface {
     public String movieTitle;
 
     private boolean hasRentalPermition(LocalTime rentalTime) {
-        return LocalTime.now().isAfter(rentalTime.plusMinutes(0));
+        return LocalTime.now().isAfter(rentalTime.plusMinutes(1));
     }
 
     public void setRentTimer() {

@@ -27,8 +27,9 @@ public class MovieMenu implements MovieMenuInterface {
         System.out.println("\n2. Search by Movie Genre");
         System.out.println("\n3. See your rental history");
         System.out.println("\n4. Get movie recommendations");
-        System.out.println("\n5. Exit");
-        input = InputUtilities.getUserInt("Please choose an option from the list above.", 1, 5);
+        System.out.println("\n5. Change your password");
+        System.out.println("\n6. Exit");
+        input = InputUtilities.getUserInt("Please choose an option from the list above.", 1, 6);
         switch (input) {
             case 1:
                 // Search and rent a movie
@@ -50,6 +51,9 @@ public class MovieMenu implements MovieMenuInterface {
             case 2:
                 // Call method to search movies by genre
                 searchGenre = InputUtilities.getUserText("Please enter the name of the genre");
+                SearchMovie eirvid = new SearchMovie();
+                eirvid.searchGenre(searchGenre);
+                returnToMenu();
                 break;
 
             case 3:
@@ -68,6 +72,8 @@ public class MovieMenu implements MovieMenuInterface {
                 returnToMenu();
                 break;
             case 5:
+
+            case 6:
                 System.out.println("Exiting...");
         }
     }
